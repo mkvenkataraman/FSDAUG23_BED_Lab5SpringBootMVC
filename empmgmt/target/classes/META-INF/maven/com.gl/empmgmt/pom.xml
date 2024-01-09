@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<!-- Model version of Maven POM -->
+	<modelVersion>4.0.0</modelVersion>
+
+	<!-- Parent POM configuration - inherits settings from Spring Boot Starter
+	Parent -->
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.2.1</version>
+		<!-- This element indicates that Maven should look for the parent POM in
+		the Maven repository -->
+		<relativePath />
+	</parent>
+
+	<!-- Project coordinates (groupId, artifactId, version) -->
+	<groupId>com.gl</groupId>
+	<artifactId>empmgmt</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<!-- Project information -->
+	<name>EmployeeManagement</name>
+	<description>Lab Project MVC using Spring Boot &amp; Thymeleaf</description>
+
+	<!-- Properties section to define variables like Java version -->
+	<properties>
+		<java.version>17</java.version>
+	</properties>
+
+	<!-- Dependencies section to define project dependencies -->
+	<dependencies>
+		<!-- Spring Data JPA for database operations -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+
+		<!-- Thymeleaf for dynamic HTML views -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+
+		<!-- Spring Web for RESTful services and more -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<!-- Spring Boot DevTools for development utilities -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
+
+		<!-- MySQL connector for database integration -->
+		<dependency>
+			<groupId>com.mysql</groupId>
+			<artifactId>mysql-connector-j</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+
+		<!-- Spring Boot test starter for testing -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<!-- Build configuration -->
+	<build>
+		<plugins>
+			<!-- Spring Boot Maven plugin -->
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
